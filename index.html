@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pixel Space Ships</title>
+		<link rel="icon" href="../Images/Interceptor Purple.png">
+		<meta charset="UTF-8">
+		<script type = "text/javascript" src="images.js"></script>
+		<script type = "text/javascript" src="../howler.core.js"></script>
+		<script type = "text/javascript" src="../howler.js"></script>
+		<script type = "text/javascript" src="sounds.js"></script>
+		<script type = "text/javascript" src="classes.js"></script>
+		<script type = "text/javascript" src="main.js"></script>
+		<script type = "text/javascript" src="functions.js"></script>
+		<script type = "text/javascript" src="levels.js"></script>
+		<style>
+			body {
+			background-color:rgba(0,0,0,1);
+			}
+			#ctxCanvas {
+				position:absolute;
+				left:3%;
+				top:3%;
+				z-index:2;
+				padding-left: 0px;
+				padding-right: 0px;
+				display:block;
+				image-rendering: optimizeSpeed;
+			  image-rendering: -moz-crisp-edges;
+			  image-rendering: -webkit-optimize-contrast;
+			  image-rendering: -o-crisp-edges;
+			  image-rendering: pixelated;
+			  -ms-interpolation-mode: nearest-neighbor;
+			}
+			#otherCanvas {
+				width:600px;
+				height:600px;
+			}
+			#backCanvas {
+				position:absolute;
+				left:0px;
+				top:0px;
+				z-index:1;
+			}
+			#foreCanvas {;
+				position:absolute;
+				left:3%;
+				top:3%;
+				z-index:3;
+				padding-left: 0px;
+				padding-right: 0px;
+				display:block;
+				image-rendering: optimizeSpeed;
+			  image-rendering: -moz-crisp-edges;
+			  image-rendering: -webkit-optimize-contrast;
+			  image-rendering: -o-crisp-edges;
+			  image-rendering: pixelated;
+			  -ms-interpolation-mode: nearest-neighbor;
+			}
+			body {
+				overflow:hidden;
+			}
+		</style>
+	</head>
+	<body onload = "start()" onmousedown = "mouseDown(event)" onmouseup = "mouseUp(event)" onresize = "resize()">
+		<canvas id = "foreCanvas" overflow = "hidden"></canvas>
+		<canvas id = "ctxCanvas" overflow = "hidden"></canvas>
+		<canvas id = "otherCanvas"></canvas>
+		<canvas id = "backCanvas" overflow = "hidden"></canvas>
+	</body>
+</html>
